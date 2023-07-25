@@ -22,17 +22,18 @@ const NoteItem = (props) => {
               <td>{note.description}</td>
               <td>{note.tag}</td>
               <td>
+                {" "}
                 <i
-                  classNameName="fa-solid fa-pen-to-square mx-2"
-                  onClick={() => {
-                    updateNote(note);
-                  }}
-                ></i>
-                <i
-                  classNameName="fa-solid fa-trash-can mx-2"
+                  className="fa-solid fa-trash-can mx-2"
                   onClick={() => {
                     deleteNote(note._id);
                     props.showAlert("Deleted Successfull", "success");
+                  }}
+                ></i>
+                <i
+                  className="fa-solid fa-pen-to-square mx-2"
+                  onClick={() => {
+                    updateNote(note);
                   }}
                 ></i>
               </td>
