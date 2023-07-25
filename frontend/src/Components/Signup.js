@@ -22,19 +22,22 @@ const Signup = (props) => {
   const hendleSubmit = async (e) => {
     e.preventDefault();
     const { name, email, password, Rpassword } = credentials;
-    const response = await fetch(`http://localhost:5000/api/auth/signup`, {
-      method: "POST",
+    const response = await fetch(
+      `https://manage-task.onrender.com/api/auth/signup`,
+      {
+        method: "POST",
 
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name,
-        email,
-        password,
-        Rpassword,
-      }),
-    });
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          password,
+          Rpassword,
+        }),
+      }
+    );
     const json = await response.json();
     console.log(json);
     if (json.success) {
