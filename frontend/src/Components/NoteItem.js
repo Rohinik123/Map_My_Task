@@ -8,8 +8,8 @@ const NoteItem = (props) => {
   const { note, updateNote } = props;
   return (
     <>
-      <div class="container mt-4">
-        <table class="table table-striped">
+      <div className="container mt-4">
+        <table className="table table-striped">
           <thead>
             <th>Title</th>
             <th>Description</th>
@@ -23,13 +23,13 @@ const NoteItem = (props) => {
               <td>{note.tag}</td>
               <td>
                 <i
-                  className="fa-solid fa-pen-to-square mx-2"
+                  classNameName="fa-solid fa-pen-to-square mx-2"
                   onClick={() => {
                     updateNote(note);
                   }}
                 ></i>
                 <i
-                  className="fa-solid fa-trash-can mx-2"
+                  classNameName="fa-solid fa-trash-can mx-2"
                   onClick={() => {
                     deleteNote(note._id);
                     props.showAlert("Deleted Successfull", "success");
